@@ -1,4 +1,4 @@
-<section class="gradient-form" style="background-color: #80ff80">
+<!--<section class="gradient-form" style="background-color: #80ff80">
   <div class="container-fluid py-sm-5 align-items-center">
     <div class="row justify-content-center align-items-center h-100">
       <div class="col-xl-6">
@@ -13,15 +13,14 @@
                 />
                 <h4 class="mt-1 mb-5 pb-1">Universidad del Papaloapan</h4>
               </div>
-              <form  [formGroup]="loginForm" >
+              <form>
                 <p>Ingrese su cuenta</p>
                 <div class="form-outline mb-4">
                   <input
                     type="email"
                     id="form2Example11"
                     class="form-control"
-                   
-                    formControlName="correo"
+                    [formControl]="correo"
                     placeholder="Número de teléfono o correo electrónico"
                   />
                   <label class="form-label" for="form2Example11">Usuario</label>
@@ -31,7 +30,7 @@
                     type="password"
                     id="form2Example22"
                     class="form-control"
-                    formControlName="password"
+                    [formControl]="password"
                   />
                   <label class="form-label" for="form2Example22"
                     >Contraseña</label
@@ -41,8 +40,7 @@
                   <button
                     id="loginButton"
                     class="btn btn-success btn-block fa-lg gradient-custom-2 mb-3"
-                    type="button"
-                    (click)="revisar()"
+                    type="button"                    
                   >
                     Login
                   </button>
@@ -64,3 +62,4 @@
     </div>
   </div>
 </section>
+-->

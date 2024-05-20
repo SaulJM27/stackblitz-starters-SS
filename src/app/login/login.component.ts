@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -11,17 +11,5 @@ import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 export class LoginComponent {
   public correo: FormControl = new FormControl();
   public password: FormControl = new FormControl();
-
-  public loginForm!:FormGroup;
-  constructor(private formBuilder: FormBuilder) {
-    this.loginForm = this.formBuilder.group({
-      correo: [''],
-      password:[''],
-    });
-  }
-
-  public revisar():void{
-    alert(this.loginForm.get('correo')?.value);
-  }
-   
+  // holaaaaaaaaaaa
 }

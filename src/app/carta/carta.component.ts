@@ -14,13 +14,11 @@ import {
   styleUrl: './carta.component.css',
 })
 export class CartaComponent {
-  /*public carta: FormGroup;
+  public carta: FormGroup;
   public cartaForm: FormControl = new FormControl();
 
   constructor(private fb: FormBuilder) {
     this.carta = this.fb.group({
-      epys: ['', Validators.required],
-      subjefe: ['', Validators.required],
       nombre_alumno: ['', Validators.required],
       matricula: ['', Validators.required],
       carrera_alumno: ['', Validators.required],
@@ -32,6 +30,9 @@ export class CartaComponent {
     });
   }
 
+  onSubmit(){
+
+  }
   guardar() {
     if (this.cartaForm.valid) {
       localStorage.setItem('cartaData', JSON.stringify(this.cartaForm.value));
@@ -41,12 +42,13 @@ export class CartaComponent {
     }
   }
 
-  verDatos() {
+  verDatosGuardados() {
     const data = localStorage.getItem('cartaData');
     if (data) {
       console.log(JSON.parse(data));
     } else {
       console.log('No hay datos guardados.');
     }
-  }*/
+  }
+
 }
