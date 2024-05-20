@@ -1,0 +1,15 @@
+.custom-login-btn {
+  margin-left: 40%; /* Esto empuja el botón hacia la derecha */
+  padding: 10px 20px; /* Aumenta el tamaño del botón */
+  font-size: 16px; /* Ajusta el tamaño del texto */
+  width: 130px;
+}
+
+.navbar,
+.navbar-expand-md,
+.navbar-dark,
+.fixed-top,
+.bg-dark {
+  top: 60px;
+  width: 100%;
+}

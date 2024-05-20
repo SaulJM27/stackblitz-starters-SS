@@ -1,0 +1,11 @@
+<div>
+  <h2>Lista alumnos</h2>
+  <div>
+    <form [formGroup]="frmAlumnos" (ngSubmit)="onSubmit()">
+      <h2>Alumnos</h2>
+      Nombre:<input type="text" formControlName="alumno" />
+      <br />
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+</div>

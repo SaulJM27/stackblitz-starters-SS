@@ -1,0 +1,9 @@
+<div>
+  {{ alumno.getNombre() }} + {{ alumno.getMatricula() }} +
+  {{ alumno.getHorasServicio() }}
+</div>
+<div>
+  Agregar horas:
+  <input type="number" id="horas" name="horas" formControlName="horas" />
+  <button (click)="agregarHoras()">Guardar</button>
+</div>

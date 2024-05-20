@@ -1,0 +1,16 @@
+<div>
+  <form [formGroup]="frmMaterias" (ngSubmit)="onSubmit()">
+    <h2>Materias</h2>
+    Nombre:<input type="text" formControlName="nombre" />
+    <button type="submit">Enviar</button>
+  </form>
+</div>
+
+<table class="table">
+  @for(materia of lista.materias; track materia.nombre) {
+  <tr>
+    <td>{{ materia.nombre }}</td>
+    <button type="button" (click)="eliminarMateria($index)">Eliminar</button>
+  </tr>
+  }
+</table>

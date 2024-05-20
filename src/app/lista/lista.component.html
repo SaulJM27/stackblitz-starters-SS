@@ -1,0 +1,18 @@
+<div>
+  <form [formGroup]="frmLista" (ngSubmit)="onSubmit()">
+    Id:<input type="text" formControlName="id" /><br />
+    Name:<input type="text" formControlName="name" />
+    <br />
+    <hr />
+    <button type="submit">Enviar</button>
+  </form>
+</div>
+
+@for(user of listaUsers.users;track user.id){
+<h3>
+  {{ user.name + ' ' + user.id }}
+  <button type="button" (click)="eliminar($index)">Eliminar</button>
+</h3>
+}@empty{
+<span>Empty list of users </span>
+}

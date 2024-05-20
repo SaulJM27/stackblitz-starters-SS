@@ -1,0 +1,24 @@
+<h2>Lista de Alumnos</h2>
+<ul>
+  <li>
+    @for(alumno of alumnos;track alumno.matricula){
+    {{ alumno.nombre }}
+    <button (click)="seleccionarAlumno(alumno)">Agregar Horas</button>
+    }
+  </li>
+</ul>
+
+<div>
+  @if(alumnoSeleccionado){
+  <h3>Alumno Seleccionado: {{ alumnoSeleccionado.nombre }}</h3>
+  <p>
+    Horas acumuladas de servicio social:
+    {{ alumnoSeleccionado.horasServicio }}
+  </p>
+  }
+  <div>
+    <label for="horas">Agregar horas:</label>
+    <input type="number" id="horas" name="horas" [(ngModel)]="horasServicio" />
+    <button (click)="agregarHoras()">Guardar</button>
+  </div>
+</div>

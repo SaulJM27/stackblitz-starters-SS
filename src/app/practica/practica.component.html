@@ -1,0 +1,31 @@
+<form [formGroup]="frmSS" (ngSubmit)="onSubmit()">
+  <label for="name">Matricula: </label>
+  <input id="name" type="text" formControlName="matricula" />
+
+  Email:<input type="text" formControlName="email" /> <br />
+  Carrera:
+  <select formControlName="carrera">
+    <option value="1">Computación</option>
+    <option value="2">Mecatrónica</option>
+    <option value="3">Matemáticas</option></select
+  ><br />
+  <button type="submit">Enviar</button>
+</form>
+
+<p>
+  <!-- @if(numCarrera==1){
+    <h1>Ing. en Computación</h1>
+  }@else if(numCarrera==2){
+    <h1>Ing. en Mecatrónica</h1>
+  }@else{
+    <h1>Lic. en Matemáticas Aplicadas</h1>
+  }
+</p>-->
+<p>
+  @switch(numCarrera){
+     @case(1){<h1>Ing. en Computación</h1>}
+     @case(2){<h1>Ing. en Mecatrónica</h1>}
+     @case(3){<h1>Lic. en Matemáticas Aplicadas</h1>}
+     @default{<b>No data matched</b>} 
+  }
+</p>

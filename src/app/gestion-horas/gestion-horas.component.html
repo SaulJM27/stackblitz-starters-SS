@@ -1,0 +1,78 @@
+@if(mostrarGestion){
+<h1>REGISTRAR HORAS DE SERVICIO SOCIAL</h1>
+<h3 class="mt-4 mb-3">Lista de Alumnos</h3>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Alumno</th>
+      <th>Agregar Horas</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for(alumno of listaAlumnos.alumnos;track alumno.getMatricula){
+    <tr>
+      <td>
+        <h5>{{ alumno.getNombre() }}</h5>
+      </td>
+      <td>
+        <button
+          type="button"
+          class="btn btn-success"
+          (click)="mostrarAgregarHoras(alumno)"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-plus"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M8 1a.5.5 0 0 1 .5.5v13a.5.5 0 0 1-1 0v-13A.5.5 0 0 1 8 1z"
+            />
+            <path
+              d="M1 8a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1H1A.5.5 0 0 1 1 8z"
+            />
+          </svg>
+        </button>
+      </td>
+    </tr>
+    }
+  </tbody>
+</table>
+} @if(mostrarAgregar){
+<h2 class="mt-4 mb-3">Agregar horas</h2>
+
+<table class="table">
+  <tbody>
+    <tr>
+      <td>Alumno:</td>
+      <td>{{ alumnoSeleccionado.getNombre() }}</td>
+    </tr>
+    <tr>
+      <td>Matrícula:</td>
+      <td>{{ alumnoSeleccionado.getMatricula() }}</td>
+    </tr>
+    <tr>
+      <td>Horas de servicio:</td>
+      <td>{{ alumnoSeleccionado.getHorasServicio() }} horas</td>
+    </tr>
+  </tbody>
+</table>
+<div class="form-group">
+  <label for="horas">Agregar horas:</label>
+  <div class="col-6">
+    <input
+      type="number"
+      class="form-control"
+      id="horas"
+      name="horas"
+      [formControl]="horas"
+      min="0"
+    />
+  </div>
+</div>
+<button class="btn btn-success" (click)="agregarHoras()">Guardar</button>
+<button class="btn btn-success" (click)="regresar()">Cancelar</button>
+}
