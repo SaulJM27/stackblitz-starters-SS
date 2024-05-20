@@ -11,4 +11,5 @@ import { FormControl } from '@angular/forms';
 export class LoginComponent {
   public correo: FormControl = new FormControl();
   public password: FormControl = new FormControl();
+  //hola
 }
