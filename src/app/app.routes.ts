@@ -3,6 +3,7 @@ import { MenuComponent } from './menu/menu.component';
 import { LoginComponent } from './login/login.component';
 import { GestionHorasComponent } from './gestion-horas/gestion-horas.component';
 import { AlumnoListComponent } from './alumno-list/alumno-list.component';
+import { CartaComponent } from './carta/carta.component';
 import { App } from '../main';
 
 export const routes: Routes = [
@@ -11,5 +12,6 @@ export const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'gestion', component: GestionHorasComponent },
   { path: 'listAlumnos', component: AlumnoListComponent },
+  { path: 'carta', component: CartaComponent },
   { path: '', redirectTo: '/menu', pathMatch: 'full' },
 ];

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl } from '@angular/forms';
 import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 
@@ -12,6 +13,7 @@ import { Router } from '@angular/router';
 export class LoginComponent {
   public correo: FormControl = new FormControl();
   public password: FormControl = new FormControl();
+  
   public mostrarHeader2: boolean = false;
   public mostrarHeader1: boolean = true;
 
